@@ -13,7 +13,10 @@ const PORT = process.env.PORT || 3030;
 
 //middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    'origin':'https://auth-frontend-wheat.vercel.app/',
+    'credentials':true
+}));
 app.use(express.urlencoded({ extended: true }));
 
 // routes
