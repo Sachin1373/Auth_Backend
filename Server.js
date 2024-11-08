@@ -22,7 +22,7 @@ app.use('/api/users', userRoutes);
 // app.use('/api/products', productRoutes);
 
 
-app.app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Welcome to the API!');
 });
 
