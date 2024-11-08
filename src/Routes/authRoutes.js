@@ -1,5 +1,5 @@
 import express from 'express'
-import User from '../modals/User.js'
+import User from '../Modals/User.js'
 import bcrypt from 'bcryptjs'
 import jwt from'jsonwebtoken'
 import dotenv from 'dotenv'
