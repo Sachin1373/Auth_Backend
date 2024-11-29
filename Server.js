@@ -1,5 +1,6 @@
 import express from "express"
 import dotenv from "dotenv"
+import cookieParser from 'cookie-parser';
 import cors from "cors"
 import ConnectDB from "./src/Config/DatabaseConnection.js"
 import authRoutes from "./src/Routes/authRoutes.js"
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 3030;
 
 //middlewares
 app.use(express.json());
+app.use(cookieParser());
 app.use(cors({
     'origin':'https://auth-frontend-wheat.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
