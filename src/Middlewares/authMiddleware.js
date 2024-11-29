@@ -6,7 +6,7 @@ dotenv.config({
 });
 
 const authMiddleware = (req, res, next) => {
-  const token = req.cookies.authToken; // Get token from HttpOnly cookie
+  const token = req.cookies.token; // Get token from HttpOnly cookie
 
   if (!token) {
     return res.status(401).json({ message: 'Unauthorized' });
