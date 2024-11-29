@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get('/userdetails', authMiddleware, async (req, res) => {
     try {
+      console.log('Token in middleware:', req.cookies.token);
       res.send(users)
     } catch (err) {
       res.status(500).json({ message: 'Server error' });
